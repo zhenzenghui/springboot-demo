@@ -14,6 +14,7 @@ public class Test {
 
     @RequestMapping("/test1/{ss}")
     public String test1(@PathVariable String ss){
+
         return ss;
     }
 
