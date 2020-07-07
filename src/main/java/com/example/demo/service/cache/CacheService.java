@@ -8,7 +8,7 @@ public interface CacheService {
 
     String get(String key);
 
-    void set(String key);
+    void set(String key, Object obj);
 
     void delete(String key);
 

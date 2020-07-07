@@ -20,8 +20,8 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2020/6/9
  */
 @Component
-@Slf4j
 @Aspect
+@Slf4j
 public class WeblogAspect {
 
     private static final ThreadLocal<Long> THREAD_LOCAL_TIMESTAMP = new ThreadLocal<>();
