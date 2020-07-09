@@ -10,6 +10,8 @@ public interface CacheService {
 
     void set(String key, Object obj);
 
-    void delete(String key);
+    void set(String key, Object obj, Long expireTime);
+
+    Boolean delete(String key);
 
 }

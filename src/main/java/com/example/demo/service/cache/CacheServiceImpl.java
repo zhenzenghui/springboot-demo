@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author zzh
@@ -47,14 +48,22 @@ public class CacheServiceImpl implements CacheService{
 
     }
 
+    @Override
+    public void set(String key, Object value, Long expireTime){
+        ValueOperations<String, Object> stringObjectValueOperations = redisTemplate.opsForValue();
+        stringObjectValueOperations.set(key, value, expireTime, TimeUnit.SECONDS);
+    }
+
     /**
      * 删除缓存
      * @param key
      */
     @Override
-    public void delete(String key) {
+    public Boolean delete(String key) {
+        Boolean bol = false;
         if (!StringUtils.isEmpty(key)) {
-            redisTemplate.delete(key);
+            bol = redisTemplate.delete(key);
         }
+        return bol;
     }
 }
