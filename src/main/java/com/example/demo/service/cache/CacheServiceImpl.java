@@ -2,7 +2,6 @@ package com.example.demo.service.cache;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -19,10 +18,6 @@ public class CacheServiceImpl implements CacheService{
 
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
-
-    @Resource
-    private StringRedisTemplate stringRedisTemplate;
-
 
     /**
      * 获取缓存
