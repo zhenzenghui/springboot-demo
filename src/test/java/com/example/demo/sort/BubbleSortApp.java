@@ -42,6 +42,17 @@ public class BubbleSortApp {
 //        }
 
 
+//        //插入排序 O(N²)
+//        for (int out=1; out<arr.length; out++) {
+//            int in = out;
+//            int tem = arr[out];
+//            while ((in > 0) && (arr[in-1] >= tem) ){
+//                arr[in] = arr[in-1];
+//                in--;
+//            }
+//            arr[in] = tem;
+//        }
+
 
 
 
