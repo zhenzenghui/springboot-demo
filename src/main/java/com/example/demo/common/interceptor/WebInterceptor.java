@@ -1,4 +1,4 @@
-package com.example.demo.common.filter;
+package com.example.demo.common.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
