@@ -33,6 +33,7 @@ public class Test {
         //cacheService.set(k,v);
         try {
             log.info("============test1");
+            log.info("============test3");
             log.info("-------k={},v={}",k,v);
             System.out.println("k=" + k + "; v=" + v);
         }catch (Exception e) {
