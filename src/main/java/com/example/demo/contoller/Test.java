@@ -32,7 +32,6 @@ public class Test {
     public String test1(String k, String v){
         //cacheService.set(k,v);
         try {
-
             log.info("-------k={},v={}",k,v);
             System.out.println("k=" + k + "; v=" + v);
         }catch (Exception e) {
